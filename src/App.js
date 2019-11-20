@@ -1,24 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import { setConfiguration } from "react-grid-system";
+import './styles/App.scss';
+import LandingPage from './components/landing-page';
+import FlowScreen from './components/flow-screen';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
+
+setConfiguration({
+  defaultScreenClass: 'sm',
+  gutterWidth: 40,
+  containerWidths: [2000, 2000, 2000, 2000]
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <LandingPage />
+      <FlowScreen />
+      <Footer />
     </div>
   );
 }

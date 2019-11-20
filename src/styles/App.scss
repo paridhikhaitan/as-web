@@ -1,0 +1,157 @@
+@import "./Reset.scss";
+@import "./Typography.scss";
+@import "./Constants.scss";
+
+html, body{
+    height: 100%;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+
+    &:hover{
+        filter: opacity(0.4);
+    }
+
+}
+.container{
+    margin: 0 $spacer4;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    text-align: center;
+
+    .mobileTitle{
+        display: none;
+
+        @media screen and (max-width: $sm){
+            display: block;
+            color: black;
+            text-align: center;
+            padding-top: $spacer5*2;
+        }
+    }
+    
+
+    @media screen and (max-width: $sm){
+        margin: 0 !important;
+        height: 100vh;
+        background-image: url("../images/LandingPage.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .title{
+        padding-top: $spacer5*2;
+    }
+}
+
+.landingPage{
+    display: none;
+
+    @media screen and (min-width: $sm){
+        width: 100%;
+        height: 80vh;
+        display: block;
+        background-image: url("../images/LandingPage.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+.navb{
+    margin: $spacer3 0;
+
+    .rightButtons{
+        float: right;
+        @media screen and (min-width: $sm){
+            display: flex;
+        }
+        
+        h4{
+            margin-left: $spacer3;
+            text-align: right;
+
+            @media screen and (max-width: $sm){
+                &:not(:first-child) {
+                    margin-top: $spacer1;
+                  }
+            }
+        }
+    }  
+
+    @media screen and (max-width: $sm){
+        margin:$spacer4;
+    }
+}
+
+
+.centerImages{
+    text-align: center;
+
+    .desktopImages {
+        @media screen and (max-width: $md){
+            display: none;
+        }
+
+        .middle{
+            margin-top: $spacer5;
+            display: flex;
+            text-align: center;
+
+            div{
+                width: 30%;
+                text-align: center;
+                margin: 0 auto;
+            }
+            img{
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+            
+        }
+        
+    }
+
+    .mobileImg{
+        width: 100%;
+    }
+
+    img:hover{
+        filter: opacity(0.5);
+    }
+}
+
+.footer{
+    background-color: $footer-color;
+    color: white;
+    padding-top: $spacer4;
+    padding-bottom: $spacer4;
+
+    .leftFooter{
+        padding-left: $spacer2;
+
+        @media screen and (max-width: $sm){
+            text-align: center;
+        }
+    }
+
+    a{
+        color: white;
+        &:hover{
+            color: white;
+            -webkit-text-fill-color: #141414; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: white;
+        }
+    }
+}
+
+
